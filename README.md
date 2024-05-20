@@ -88,22 +88,22 @@ lines must conform to their intended use.
 For example, this is for a singles competition that has play by dates
 ```text
 round,match,play_by,play_on,time,home_participant,away_participant
-1,K1R1M2,02/06/24,,,Julia Kitson,Jo Longland
-1,K1R1M4,02/06/24,,,Ben Johnson,Peter Elliott
-1,K1R1M6,02/06/24,,,Joe Pike,James Reed
-1,K1R1M8,02/06/24,,,Ann Peel,Ashley Kitson
-1,K1R1M10,02/06/24,,,Richard Seaton,Dee Wagstaff
-1,K1R1M12,02/06/24,,,Trevor Fenables,Rob Wood
-1,K1R1M14,02/06/24,,,Nick Hillier,Suzanne Seaton
-1,K1R1M16,02/06/24,,,Luke Butcher,Rob Hinkley
-2,K1R2M1,23/06/24,,,Glenda Rhodes,Winner of K1R1M2
-2,K1R2M2,23/06/24,,,Tony Glenister,Winner of K1R1M4
-2,K1R2M3,23/06/24,,,Steve Cusack,Winner of K1R1M6
-2,K1R2M4,23/06/24,,,John Shand,Winner of K1R1M8
-2,K1R2M5,23/06/24,,,Karin Livesley,Winner of K1R1M10
-2,K1R2M6,23/06/24,,,John Nolan,Winner of K1R1M12
-2,K1R2M7,23/06/24,,,Chris Skelton,Winner of K1R1M14
-2,K1R2M8,23/06/24,,,Pete Longland,Winner of K1R1M16
+1,K1R1M2,02/06/24,,,Player 1,Player 2
+1,K1R1M4,02/06/24,,,Player 3,Player 4
+1,K1R1M6,02/06/24,,,Player 5,Player 6
+1,K1R1M8,02/06/24,,,Player 7,Player 8
+1,K1R1M10,02/06/24,,,Player 9,Player 10
+1,K1R1M12,02/06/24,,,Player 11,Player 12
+1,K1R1M14,02/06/24,,,Player 13,Player 14
+1,K1R1M16,02/06/24,,,Player 15,Player 16
+2,K1R2M1,23/06/24,,,Player 17,Winner of K1R1M2
+2,K1R2M2,23/06/24,,,Player 18,Winner of K1R1M4
+2,K1R2M3,23/06/24,,,Player 19,Winner of K1R1M6
+2,K1R2M4,23/06/24,,,Player 21,Winner of K1R1M8
+2,K1R2M5,23/06/24,,,Player 22,Winner of K1R1M10
+2,K1R2M6,23/06/24,,,Player 23,Winner of K1R1M12
+2,K1R2M7,23/06/24,,,Player 24,Winner of K1R1M14
+2,K1R2M8,23/06/24,,,Player 25,Winner of K1R1M16
 3,K1R3M1,21/07/24,,,Winner of K1R2M1,Winner of K1R2M2
 3,K1R3M2,21/07/24,,,Winner of K1R2M3,Winner of K1R2M4
 3,K1R3M3,21/07/24,,,Winner of K1R2M5,Winner of K1R2M6
@@ -122,15 +122,15 @@ Where you indicate that one of the participants is the result of a match in a pr
 And this for a triples competition with Play on dates and times
 ```text
 round,match,play_by,play_on,time,home_participant,away_participant
-1,K1R1M1,,11/07/24,6.30pm,"Tony Knowles, Pete Longland and Nick Hillier","Mick Corbyn, Jon Spencer and Keith Gordon"
-1,K1R1M2,,11/07/24,6.30pm,"Dave Buck, Keith Lakin and Rob Hinkley","Paul Munday, Martin Eaton and Keith Thatcher"
-1,K1R1M3,,11/07/24,6.30pm,"Terry Chapman, Rob Wood and James Reed","Jeff Lloyd, Tony Glenister and Joe Pike"
-1,K1R1M4,,11/07/24,6.30pm,"Trevor Fenables, Ben Johnson and Luke Butcher","Ashley Kitson, Eric Miskowicz and John Nolan"
+1,K1R1M1,,11/07/24,6.30pm,"Team A","Team B"
+1,K1R1M2,,11/07/24,6.30pm,"Team C","Team  D"
+1,K1R1M3,,11/07/24,6.30pm,"Team E","Team F"
+1,K1R1M4,,11/07/24,6.30pm,"Team G","Team H"
 2,K1R2M1,,01/08/24,6.30pm,Winner of K1R1M1,Winner of K1R1M2
 2,K1R2M2,,01/08/24,6.30pm,Winner of K1R1M3,Winner of K1R1M4
 3,K1R3M1,,,,Winner of K1R2M1,Winner of K1R2M2
 ```
-**NB** The participant names are surrounded by speach quotes as they include commas.
+**NB** The participant names are surrounded by speach quotes as they can include commas.
 
 ### Creating Image Files
 
