@@ -1,0 +1,9 @@
+-s dir
+--name bowl-tournament
+--license MIT
+--architecture all
+--description "Utility to create a bowls tournament graph of games"
+--url "https://example.com/hello-world"
+--maintainer "Ashley Kitson"
+
+dist/bowl-tournament=/usr/bin/bowl-tournament dist/plantuml.jar=/usr/share/bowl-tournament/plantuml.jar
