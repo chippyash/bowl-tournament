@@ -68,6 +68,7 @@ Arguments:
 Flags: 
    -g, --groupdates              group dates in the round data (default: false)
    -h, --help                    displays usage information of the application or a command (default: false)
+   -o, --output                  output png file (default: false)
    -t, --theme                   the Plantuml theme to use. See https://plantuml.com/theme (default: _none_)
    -v, --version                 displays version number (default: false)
 ```
