@@ -193,7 +193,13 @@ func command(args map[string]commando.ArgValue, flags map[string]commando.FlagVa
 			panic(err)
 		}
 		if createPng {
-			createPngFile(inp, args["plantumlpath"].Value)
+			var pPath string
+			if args["plantumlpath"].Value == "" {
+				pPath = PlantumlPath
+			} else {
+				pPath = args["plantumlpath"].Value
+			}
+			createPngFile(inp, pPath)
 		}
 	}
 }
@@ -299,6 +305,7 @@ func createPngFile(input string, plantumlpath string) {
 	}
 	outfile := strings.TrimSuffix(absPath, filepath.Ext(absPath)) + ".puml"
 	cmd := exec.Command("java", "-jar", plantumlpath, outfile)
+	println(cmd.String())
 	_, err = cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())

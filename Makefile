@@ -20,7 +20,7 @@ build: clean  ## Build the binary and zip into dist/bowl-tournament.tar.gz
 deploy-local: build  ## Deploy binary locally
 	sudo mv dist/bowl-tournament /usr/bin/bowl-tournament
 	sudo mkdir -p /usr/share/bowl-tournament/
-	sudo cp dist/plantuml.jar /usr/share/bowl-tournament/plantuml.jar
+	sudo cp dependencies/plantuml.jar /usr/share/bowl-tournament/plantuml.jar
 
 .PHONY: clean
 clean: ## Clean up the dist directory
@@ -34,7 +34,7 @@ getfpm: ## Install FPM and supporting libraries
 .PHONY: package
 package: build ## Package executable into rpm and deb packages
 	fpm -t rpm -v $(VERSION) --rpm-use-file-permissions --force
-	fpm -t deb -v $(VERSION) --rpm-use-file-permissions --force
+	fpm -t deb -v $(VERSION) --deb-use-file-permissions --force
 	mv -f *.rpm ./dist
 	mv -f *.deb ./dist
 	rm -f dist/bowl-tournament
