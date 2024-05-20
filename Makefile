@@ -11,7 +11,7 @@ build: clean  ## Build the binary and zip into dist/bowl-tournament.tar.gz
 	env GOOS=linux CGO_ENABLED=0 go build -ldflags="-s -w" -o dist/bowl-tournament bowl-tournament.go
 	chmod a+x dist/bowl-tournament
 	cp dist/bowl-tournament .
-	cp dist/plantuml.jar .
+	cp dependencies/plantuml.jar .
 	tar -czvf dist/bowl-tournament.tar.gz bowl-tournament README.md plantuml.jar
 	rm -f bowl-tournament
 	rm -f plantuml.jar
@@ -37,3 +37,4 @@ package: build ## Package executable into rpm and deb packages
 	fpm -t deb -v $(VERSION) --rpm-use-file-permissions --force
 	mv -f *.rpm ./dist
 	mv -f *.deb ./dist
+	rm -f dist/bowl-tournament

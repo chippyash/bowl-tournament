@@ -6,4 +6,4 @@
 --url "https://github.com/chippyash/bowl-tournament"
 --maintainer "Ashley Kitson"
 
-dist/bowl-tournament=/usr/bin/bowl-tournament dist/plantuml.jar=/usr/share/bowl-tournament/plantuml.jar
+dist/bowl-tournament=/usr/bin/bowl-tournament dependencies/plantuml.jar=/usr/share/bowl-tournament/plantuml.jar
