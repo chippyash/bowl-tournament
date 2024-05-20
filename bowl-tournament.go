@@ -20,6 +20,10 @@ import (
 	"time"
 )
 
+const (
+	PlantumlPath = "/usr/share/bowl-tournament/plantuml.jar"
+)
+
 type Match struct {
 	Round           int
 	Match           string
@@ -50,8 +54,9 @@ func init() {
 		AddArgument("game", "name of game", "").
 		AddFlag("groupdates,g", "group dates in the round data", commando.Bool, false).
 		AddFlag("theme,t", "the Plantuml theme to use. See https://plantuml.com/theme", commando.String, "_none_").
-		AddFlag("output, o", "output png file", commando.Bool, false).
+		AddFlag("output,o", "output png file", commando.Bool, false).
 		AddFlag("glob,l", "find and process all csv files. 'input' argument is the directory path to process. 'game' argument is regex pattern to extract game name from file name", commando.Bool, false).
+		AddFlag("plantumlpath,p", "path to plantuml.jar if not using supplied jar", commando.String, PlantumlPath).
 		SetAction(command)
 
 }
@@ -188,7 +193,7 @@ func command(args map[string]commando.ArgValue, flags map[string]commando.FlagVa
 			panic(err)
 		}
 		if createPng {
-			createPngFile(inp)
+			createPngFile(inp, args["plantumlpath"].Value)
 		}
 	}
 }
@@ -287,13 +292,13 @@ skinparam minClassWidth %d
 	return puml
 }
 
-func createPngFile(input string) {
+func createPngFile(input string, plantumlpath string) {
 	absPath, err := filepath.Abs(input)
 	if err != nil {
 		panic(err)
 	}
 	outfile := strings.TrimSuffix(absPath, filepath.Ext(absPath)) + ".puml"
-	cmd := exec.Command("java", "-jar", "./plantuml.jar", outfile)
+	cmd := exec.Command("java", "-jar", plantumlpath, outfile)
 	_, err = cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())
