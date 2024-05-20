@@ -178,8 +178,11 @@ Assuming you are currently in your terminal in your working directory then the f
 `bowl-tournament $PWD "RTBC Outdoor Championship 2024" ".*2024 (.*)" -g -o -l`
 
 ## For development
+**Read the [CONTRIBUTING](CONTRIBUTING.md) guidelines**
+
 The utility is written in Go V1.21+
- - clone this repo and then change directory to the clone.
+ - fork this repo and then change directory to a clone of your fork.
+ - create a new bug or feature branch
  - install the `make` tool if not already done.
  - run `make help` for list of available make commands.
  - run `make deploy-local` to build and deploy the utility locally.
@@ -190,6 +193,11 @@ The utility is written in Go V1.21+
 The source is in bowl-tournament.go.
 
 Before submitting a pull request run `make package`.
+
+Create a PR from your fork to the master branch of this repository
+
+## Help Required
+If you know how to build and deploy this application for Windows and/or Macintosh, please consider making a pull request.
 
 ## License
 This software is licensed under the MIT License. See LICENSE.
