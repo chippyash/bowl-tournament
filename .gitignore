@@ -2,3 +2,4 @@ localdata
 *.csv
 *.png
 *.puml
+!docs/*

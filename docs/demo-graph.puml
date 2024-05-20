@@ -1,0 +1,120 @@
+@startuml
+title Tournament Name\nMixed Pairs
+hide empty methods
+hide circle
+left to right direction
+skinparam minClassWidth 265
+package "Round 1" {
+	note "Play By: <b>21/07/24</b>" as n1
+	class K1R1M4 {
+		Player 1 and Player 2
+		Player 3 and Player 4
+	}
+	class K1R1M7 {
+		Player 5 and Player 6
+		Player 7 and Player 8
+	}
+	class K1R1M1 {
+		Player 9 and Player 10
+		Player 11 and Player 12
+	}
+	class K1R1M6 {
+		Player 13 and Player 14
+		Player 15 and Player 16
+	}
+	class K1R1M8 {
+		Player 17 and Player 18
+		Player 19 and Player 20
+	}
+	class K1R1M2 {
+		Player 21 and Player 22
+		Player 23 and Player 24
+	}
+	class K1R1M3 {
+	    Player 25 and Player 26
+		Player 27 and Player 28
+	}
+	class K1R1M5 {
+		Player 29 and Player 30
+		Player 31 and Player 32
+	}
+}
+package "Round 2" {
+	note "Play By: <b>04/08/24</b>" as n2
+	class K1R2M2 {
+		Winner of K1R1M3
+-
+-
+		Winner of K1R1M4
+-
+-
+	}
+	class K1R2M1 {
+		Winner of K1R1M1
+-
+-
+		Winner of K1R1M2
+-
+-
+	}
+	class K1R2M4 {
+		Winner of K1R1M7
+-
+-
+		Winner of K1R1M8
+-
+-
+	}
+	class K1R2M3 {
+		Winner of K1R1M5
+-
+-
+		Winner of K1R1M6
+-
+-
+	}
+}
+package "Semi Finals" {
+	note "Play By: <b>11/08/24</b>" as n3
+	class K1R3M1 {
+		Winner of K1R2M1
+-
+-
+		Winner of K1R2M2
+-
+-
+	}
+	class K1R3M2 {
+		Winner of K1R2M3
+-
+-
+		Winner of K1R2M4
+-
+-
+	}
+}
+package "Finals" {
+	class K1R4M1 {
+		Winner of K1R3M1
+-
+-
+		Winner of K1R3M2
+-
+-
+	}
+}
+K1R1M6 --> K1R2M3
+K1R1M8 --> K1R2M4
+K1R2M3 --> K1R3M2
+K1R1M2 --> K1R2M1
+K1R1M3 --> K1R2M2
+K1R1M5 --> K1R2M3
+K1R3M1 --> K1R4M1
+K1R1M4 --> K1R2M2
+K1R1M7 --> K1R2M4
+K1R2M2 --> K1R3M1
+K1R3M2 --> K1R4M1
+K1R1M1 --> K1R2M1
+K1R2M1 --> K1R3M1
+K1R2M4 --> K1R3M2
+@enduml

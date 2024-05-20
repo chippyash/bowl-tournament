@@ -2,7 +2,7 @@
 
 A cli utility to create bowls fixture pictorial representation e.g.
 
-![Singles/Oudoor Championship 2024 Mens Pairs.puml](Singles/Oudoor Championship 2024 Mens Pairs.png)
+![docs/demo-graph.puml](docs/demo-graph.png)
 
 ## Pre Installation
 Install Graphviz
