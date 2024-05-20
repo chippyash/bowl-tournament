@@ -3,7 +3,7 @@
 --license MIT
 --architecture all
 --description "Utility to create a bowls tournament graph of games"
---url "https://example.com/hello-world"
+--url "https://github.com/chippyash/bowl-tournament"
 --maintainer "Ashley Kitson"
 
 dist/bowl-tournament=/usr/bin/bowl-tournament dist/plantuml.jar=/usr/share/bowl-tournament/plantuml.jar
